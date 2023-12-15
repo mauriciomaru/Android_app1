@@ -20,7 +20,7 @@ import com.example.android_app.Models.Note
 import com.example.android_app.Models.NoteViewModel
 import com.example.android_app.databinding.ActivityMainBinding
 
-class MainActivity() : AppCompatActivity(), NotesAdapter.NotesItemClickListener(), PopupMenu.OnMenuItemClickListener,
+class MainActivity() : AppCompatActivity(), PopupMenu.OnMenuItemClickListener,
     Parcelable {
 
     private lateinit var binding: ActivityMainBinding
@@ -147,6 +147,10 @@ class MainActivity() : AppCompatActivity(), NotesAdapter.NotesItemClickListener(
 
     override fun describeContents(): Int {
         return 0
+    }
+
+    fun onLongItemClick(note: Note, notesLayout: CardView?) {
+
     }
 
     companion object CREATOR : Parcelable.Creator<MainActivity> {

@@ -59,7 +59,7 @@ class NotesAdapter(
 
         // Configura o ouvinte de clique longo para o CardView
         holder.notes_layout.setOnLongClickListener {
-            listener.onLongItemClicked(
+            listener.onLongItemClick(
                 notesList[holder.adapterPosition],
                 holder.notes_layout
             )
